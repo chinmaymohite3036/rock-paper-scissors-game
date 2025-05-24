@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+
+    <div id="welcome-screen">
+      <h2>Welcome to Rock Paper Scissors!</h2>
+      <p>
+        🪨 Rock beats Scissors<br />📄 Paper beats Rock<br />✂️ Scissors beats
+        Paper
+      </p>
+      <p>First to score more wins. Click Continue to start playing!</p>
+      <button id="start-btn">Continue</button>
+    </div>
+
+    <div id="game-container" style="display: none">
+      <div class="choices">
+        <div class="choice" id="Rock">
+          <img src="assets/rock1.JPG" />
+        </div>
+        <div class="choice" id="Paper">
+          <img src="assets/paper1.JPG" />
+        </div>
+        <div class="choice" id="Scissors">
+          <img src="assets/scissors1.JPG" />
+        </div>
+      </div>
+
+      <div class="score-board">
+        <div class="score">
+          <p id="user-score">0</p>
+          <p>You</p>
+        </div>
+        <div class="score">
+          <p id="comp-score">0</p>
+          <p>Comp</p>
+        </div>
+      </div>
+
+      <div class="msg-container">
+        <p id="msg">Play your move</p>
+      </div>
+
+      <button id="reset-btn">Reset Game</button>
+
+      <audio id="winSound" src="assets/winner.wav"></audio>
+      <audio id="loseSound" src="assets/lose.mp3"></audio>
+      <audio id="drawSound" src="assets/gamedraw.mp3"></audio>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
